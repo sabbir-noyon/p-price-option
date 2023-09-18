@@ -1,4 +1,5 @@
 // import React from 'react';
+import Links from "../Links/Links";
 
 const NavBar = () => {
     
@@ -15,11 +16,11 @@ const NavBar = () => {
     return (
         <nav>
             
-            <ul className="flex md:justify-end">
+            <ul className="flex md:justify-end flex-col md:flex-row">
                 
                {
 
-                routes.map((route)=> <li className="m-10" key={route.id}><a className="text-2xl font-medium" href={route.path}>{route.name}</a></li>)
+                routes.map((route)=> <Links key={route.id} route={route} ></Links>)
 
                }
                 
