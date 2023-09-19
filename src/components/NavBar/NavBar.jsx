@@ -21,18 +21,20 @@ const NavBar = () => {
     
     
     return (
-        <nav>
-            
-            
-            
-            <ul className="flex md:justify-end lg:justify-end flex-col md:flex-row lg:flex-row">
-                <div onClick={()=>setOpen(!open)}>
+        <nav className="bg-cyan-700 ">
+
+<div className="md:ml-0 ml-32" onClick={()=>setOpen(!open)}>
                     {
-                      open === true ? <RiMenu2Fill className="text-4xl mt-10 md:hidden ml-12 md:ml-0 lg:ml-0"></RiMenu2Fill> : <AiOutlineClose className="text-4xl mt-10 md:hidden ml-12 md:ml-0 lg:ml-0"></AiOutlineClose>
+                      open === true ? <RiMenu2Fill className=" text-5xl mt-10 md:hidden ml-12 md:ml-0 lg:ml-0"></RiMenu2Fill> : <AiOutlineClose className=" text-5xl mt-10 md:hidden ml-12 md:ml-0 lg:ml-0"></AiOutlineClose>
                     }
                     
                     
                 </div>
+            
+            
+            
+            <ul className={`md:relative absolute ${open || window.innerWidth >= 768 ?'flex' : 'hidden'} md:top-0 top-28 flex md:justify-end lg:justify-end flex-col md:flex-row lg:flex-row`}>
+                
                 
                {
 
